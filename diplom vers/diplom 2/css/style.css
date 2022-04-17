@@ -1,0 +1,190 @@
+/* 1: В изначальном макете, там где находятся ценники люстры и стола, можно заметить, что они расположены на одном уроне. Однако, как мне показалось, это "намеренная" ошибка и вот почему: Название люстры залезает на саму картину. Нигде в макете больше такого нет. Сперва я подумал, что дизайнер хотел таким образом выровнять ценники, но тогда почему он не сделал тоже самое с большим стулом "Белый Шоколад"? В итоге я решил не размещать название люстры на картине, дабы сохранить общую логичечкую структуру.
+2: После долгих мучений с "Новинками" я просто сдался. Не понимаю, как их поставить на место, чтобы не сбивался весь макет. Бокс-сайзинг не помог.
+3: Аналогичная ситуация с оформлением кнопок слайдера. Буду продолжать изучать эту тему самостоятельно, дабы прийти к необходимому уровню понимания.
+*/
+
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/open-sans.woff2") format("woff2"), url("../fonts/open-sans.woff") format("woff");
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/playfair-display-bold.woff2") format("woff2"), url("../fonts/playfair-display.woff") format("woff");
+}
+@media (max-width: 1920px) {
+  .container {
+    background-color: bisque;
+  }
+}
+@media (max-width: 1440px) {
+    .container {
+      background-color: rgb(135, 86, 27);
+    }
+  }
+@media (max-width: 1024px) {
+    .container {
+      max-width: 350px;
+    background-color: rgb(255, 255, 255);
+    }
+    .page-content{
+      cursor: pointer;
+      background-color: white !important;
+      max-width: 288px !important;
+      background-color: transparent;
+      display:flex !important;
+      flex-direction: column !important;
+      align-items: baseline !important;
+    } 
+    .photo{
+      width: 288px !important;
+      height: 289px !important;
+    }
+    .photo1{
+      width: 288px !important;
+      height: 289px !important;
+      background: white !important;
+    }
+    .page-largeitem{
+      width: 288px !important;
+      height: 289px !important;
+      margin-top: 0px !important;
+    }
+    .page-smallitem{
+      width: 288px !important;
+    }
+    .page-smallitem1{
+      background: white !important;
+    }
+    .main-screen{
+      visibility: hidden !important;
+    }
+  }
+@media (max-width: 768px) {
+    .container {
+    background-color: rgb(242, 206, 163);
+    }
+    .page-content{
+      display:flex;
+      flex-direction: column;
+    }
+  }
+@media (max-width: 425px) {
+    .container {
+    background-color: rgb(24, 17, 9);
+    }
+    .page-content{
+      display:flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 375px) {
+    .container {
+    background-color: rgb(241, 228, 213);
+    }
+    .page-content{
+      display:flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 320px) {
+    .container {
+    background-color: rgb(97, 59, 12);
+    }
+    .page-content{
+      display:flex;
+      flex-direction: column;
+    }
+  }
+.container,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  background-color: #f9fdff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1220px;
+  min-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+.page-title{
+  max-width: 173px;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  padding-right: 127px;
+  padding-bottom: 148px;
+}
+.page-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.page-smallitem{
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-smallitem1{
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FAECE9;
+}
+.page-largeitem{
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px;
+}
+.person-info{
+  max-width: 825px;
+  margin-top: 102px;
+  margin-left: 108px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slider-ava{
+  border-radius: 50%;
+}
+.swiper-pagination {
+  position: relative;
+  align-items: center;
+}
+.swiper-pagination-bullet{
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: grey;
+  opacity: 1;
+}
+.swiper-pagination-bullet :focus{
+  background: white;
+}
